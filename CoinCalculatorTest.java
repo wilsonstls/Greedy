@@ -24,11 +24,12 @@ public class CoinCalculatorTest {
     @Test
     public void testShouldRoundTwoPlaces() {
 
-      // final double delta = 0.01;
+      // test for accurate rounding;
+        BigDecimal expected = new BigDecimal("1.00");
         BigDecimal bdChange = new BigDecimal(0.9959999);
         bdChange = bdChange.setScale(2, BigDecimal.ROUND_HALF_UP);
 
-        assertEquals("1.00", bdChange);
+        assertEquals(expected, bdChange);
 
     }
 
